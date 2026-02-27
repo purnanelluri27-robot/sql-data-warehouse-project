@@ -10,6 +10,21 @@ notes:
 */
 
 
+SELECT 
+    CUSTOMER KEY,
+    COUNT(*) AS duplicate_count
+FROM gold.dim_customers
+GROUP BY customer_key
+HAVING COUNT(*) > 1;
+
+    
+
+
+
+
+
+
+
 SELECT DISTINCT
     ci.cst_gndr,
     ca.gen,
